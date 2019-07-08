@@ -1,0 +1,18 @@
+<!DOCTYPE struts PUBLIC
+"-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+"http://struts.apache.org/dtds/struts-2.0.dtd">
+
+<struts>
+    <package name="default" extends="struts-default" namespace="/">
+        <action name="loginAction" class="netbanking.Login">
+            <interceptor-ref name="jsonValidationWorkflowStack"></interceptor-ref>
+            <result name="success">/test.jsp</result>
+            <result name="input">/success.jsp</result>
+        </action>
+        <action name="registerAction" class="netbanking.Register">
+            <result name="success">/test.jsp</result>
+            <result name="input">/register.jsp</result>
+            <result name="">/register.jsp</result>
+        </action>
+    </package>
+</struts>
